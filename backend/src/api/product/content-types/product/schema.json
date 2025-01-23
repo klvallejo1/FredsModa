@@ -43,7 +43,7 @@
     "origin": {
       "type": "enumeration",
       "enum": [
-        "Estados Unidos",
+        "USA",
         "Ecuador",
         "Internacional",
         "Japon"
@@ -61,9 +61,9 @@
     "isFeatured": {
       "type": "boolean"
     },
-    "categories": {
+    "category": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "oneToOne",
       "target": "api::category.category"
     }
   }
