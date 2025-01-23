@@ -3,7 +3,13 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { FilterTypes } from "@/types/filters";
 
-const FilterOrigin = () => {
+type FiltersOriginProps = {
+  setFilterOrigin: (origin: string) => void
+}
+
+const FilterOrigin = (props : FiltersOriginProps) => {
+
+  const {setFilterOrigin} = props;
   const { result, loading }: FilterTypes = useGetProductField();
 
   console.log('result:', result);
@@ -14,7 +20,7 @@ const FilterOrigin = () => {
       <p className="mb-3 font-bold">Origen</p>
       {loading && result === null && <p>Cargando Origen...</p>}
 
-      <RadioGroup>
+      <RadioGroup onValueChange={(value) => setFilterOrigin(value)} >
         {result?.schema?.attributes?.origin?.enum?.map((origin: string) => (
           <div key={origin} className="flex items-center space-x-2">
             <RadioGroupItem value={origin} id={origin} />

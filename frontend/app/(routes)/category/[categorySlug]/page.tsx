@@ -8,6 +8,7 @@ import FiltersControlsCategory from "./components/filters-controls-category"
 import SkeletonSchema from "@/components/skeletonSchema"
 import ProductCard from "./components/product-card"
 import { ProductType } from "@/types/product"
+import { useState } from "react"
 
 export default function Page() {
 
@@ -17,6 +18,8 @@ export default function Page() {
     const {result, loading} : ResponseType = useGetCategoryProduct(categorySlug)
     const router = useRouter()
 
+    const [filterOrigin, setFilterOrigin] = useState('')
+
     return (
         <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
             {result !== null && !loading && (
@@ -25,7 +28,7 @@ export default function Page() {
 
             <Separator className="sm:flex sm:justify-between" />
 
-            <FiltersControlsCategory/>
+            <FiltersControlsCategory setFilterOrigin={setFilterOrigin}/>
 
             <div className="grid gap-5 mt-8 sm:grid-cols-2 md:grid-cols-3 md:gap-10">
                 {loading && (
