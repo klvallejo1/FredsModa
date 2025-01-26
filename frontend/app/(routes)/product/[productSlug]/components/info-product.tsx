@@ -34,7 +34,6 @@ const InfoProduct = (props : InfoProductProps) => {
 
             <div className="flex items-center gap-5">
                 <Button className="w-full" onClick={() => addItem(product)}>Comprar</Button>
-                <Heart width={30} strokeWidth={1} className="transition duration-300 cursor-pointer hover:fill-black" onClick={() => console.log("Add to loved products")}></Heart>
             </div>
         </div>
      );

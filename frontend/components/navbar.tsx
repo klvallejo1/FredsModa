@@ -33,8 +33,6 @@ const Navbar = () => {
                         </div>
                      )
                 }
-                <Heart strokeWidth="1" className="cursor-pointer" onClick={() => router.push("/loved-products")} />
-                <User strokeWidth={1} className="cursor-pointer" />
 
                 <ToggleTheme />
             </div>

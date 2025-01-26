@@ -3,14 +3,23 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useCart } from "@/hooks/use-cart";
 import { formatPrice } from "@/lib/formatPrice";
+import { useRouter } from "next/navigation";
 import CartItem from "./components/cart-items";
-import {loadStripe} from '@stripe/stripe-js'
 
 export default function Page() {
   const { items, removeAll } = useCart();
   const prices = items.map((product) => product.attributes.price);
   const totalPrice = prices.reduce((total, price) => total + price, 0);
+  const router = useRouter();
 
+  const buy = async () => {
+    try {
+      removeAll();
+      router.push("/success");
+    } catch (error) {
+      console.error("Error");
+    }
+  };
 
   return (
     <div className="max-w-6xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
@@ -20,7 +29,7 @@ export default function Page() {
           {items.length === 0 && <p className="dark:text-white">No hay productos en el carrito 😱</p>}
           <ul>
             {items.map((item) => (
-              <CartItem key={item.id} product= {item}></CartItem>
+              <CartItem key={item.id} product={item}></CartItem>
             ))}
           </ul>
         </div>
@@ -34,7 +43,7 @@ export default function Page() {
               <p className="dark:text-white">{formatPrice(totalPrice)}</p>
             </div>
             <div className="flex items-center justify-center w-full mt-3">
-              <Button className="w-full" onClick={() => console.log("Compra")}>Comprar</Button>
+              <Button className="w-full" onClick={buy}>Comprar</Button>
             </div>
           </div>
         </div>
