@@ -43,9 +43,10 @@
     "origin": {
       "type": "enumeration",
       "enum": [
-        "anime",
-        "casual",
-        "urbana"
+        "camisetas",
+        "jeans",
+        "gorras",
+        "accesorios"
       ]
     },
     "size": {
