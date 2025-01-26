@@ -24,8 +24,6 @@ export default function Page() {
         filterOrigin === '' ? result : result.filter((product : ProductType) => product.attributes.origin === filterOrigin)
     )
 
-    console.log(filteredProducts)
-
     return (
         <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
             {result !== null && !loading && (
@@ -45,9 +43,7 @@ export default function Page() {
                     filteredProducts.map((product: ProductType) => (
                         <ProductCard key={product.id} product = {product}/>
                     ))
-
-
-                    
+    
                 )}
 
                 {filteredProducts !== null && !loading && filteredProducts.length === 0 && (

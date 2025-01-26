@@ -17,7 +17,7 @@ const ProductCard = (props : ProductCardProps) => {
 
 
     return ( 
-        <Link href={`product/${product.attributes.slug}`} className="relative p-2 transition-all duration-100 rouded-lg hover:shadow-md">
+        <Link href={`/product/${product.attributes.slug}`} className="relative p-2 transition-all duration-100 rouded-lg hover:shadow-md">
             <div className="absolute flex items-center justify-between gap-3 px-2 z-[1] top-4">
                 <p className="px-2 py-2 text-xs text-white bg-black rounded-full dark:bg-white dark:text-black w-fit ">{product.attributes.size}</p>
                 <p className="px-2 py-2 text-xs text-white bg-yellow-900 rounded-full w-fit ">{product.attributes.origin}</p>
@@ -36,7 +36,6 @@ const ProductCard = (props : ProductCardProps) => {
                                     <div className="flex justify-center gap-x-6">
                                         <IconButton onClick={() => router.push(`/product/${product.attributes.slug}`)} icon={<Expand size={20} className="text-gray-600" />} />
                                         <IconButton onClick={() => console.log("Ila")} icon={<ShoppingCart size={20} className="text-gray-600" />} />
-
                                     </div>
 
                                 </div>
