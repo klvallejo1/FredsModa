@@ -84,27 +84,27 @@ export default MenuList
 //Cambiar aquí
 const components: { title: string; href: string; description: string }[] = [
     {
-      title: "Alert Dialog",
+      title: "Camisetas",
       href: "/docs/primitives/alert-dialog",
       description:
-        "A modal dialog that interrupts the user with important content and expects a response.",
+        "Camisetas que se adaptan a tu estilo y personalidad.",
     },
     {
-      title: "Hover Card",
+      title: "Gorras",
       href: "/docs/primitives/hover-card",
       description:
-        "For sighted users to preview content available behind a link.",
+        "Gorras de moda para cualquier ocasión.",
     },
     {
-      title: "Progress",
+      title: "Jeans",
       href: "/docs/primitives/progress",
       description:
-        "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+        "Pantalones jeans de la mas alta calidad.",
     },
     {
-      title: "Scroll-area",
+      title: "Accesorios",
       href: "/docs/primitives/scroll-area",
-      description: "Visually or semantically separates content.",
+      description: "Accesorios para complementar tu outfit. Revisalos!",
     },
     {
       title: "Tabs",

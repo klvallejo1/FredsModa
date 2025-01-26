@@ -8,10 +8,8 @@ const FiltersControlsCategory = (props : FiltersControlsCategoryProps) => {
     const {setFilterOrigin} = props
 
     return ( 
-        <div className="sm:w-[350px] sm:mt-5">
-            <FilterOrigin setFilterOrigin={setFilterOrigin}>
-                
-            </FilterOrigin>
+        <div className="sm:w-[350px] sm:mt-5 p-6">
+            <FilterOrigin setFilterOrigin={setFilterOrigin}></FilterOrigin>
 
         </div>
 

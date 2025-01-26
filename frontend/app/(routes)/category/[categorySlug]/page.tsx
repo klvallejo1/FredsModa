@@ -20,10 +20,16 @@ export default function Page() {
 
     const [filterOrigin, setFilterOrigin] = useState('')
 
+    const filteredProducts = result !== null && !loading && (
+        filterOrigin === '' ? result : result.filter((product : ProductType) => product.attributes.origin === filterOrigin)
+    )
+
+    console.log(filteredProducts)
+
     return (
         <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
             {result !== null && !loading && (
-                <h1 className="text-3xl font-medium">Ropa {result[0].attributes.category.data.attributes.categoryName}</h1>
+                <h1 className="text-3xl font-medium">{result[0].attributes.category.data.attributes.categoryName}</h1>
             )}
 
             <Separator className="sm:flex sm:justify-between" />
@@ -35,13 +41,17 @@ export default function Page() {
                     <SkeletonSchema grid={3}/>
                 )}
 
-                {result !== null && !loading  && (
-                    result.map((product: ProductType) => (
+                {filteredProducts !== null && !loading  && (
+                    filteredProducts.map((product: ProductType) => (
                         <ProductCard key={product.id} product = {product}/>
                     ))
 
 
                     
+                )}
+
+                {filteredProducts !== null && !loading && filteredProducts.length === 0 && (
+                    <p>No hay productos disponibles en esta categoría 🙈</p>
                 )}
 
             </div>

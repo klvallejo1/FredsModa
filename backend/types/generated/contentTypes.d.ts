@@ -412,7 +412,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     images: Attribute.Media;
     active: Attribute.Boolean & Attribute.DefaultTo<true>;
     price: Attribute.Decimal;
-    origin: Attribute.Enumeration<['USA', 'Ecuador', 'Internacional', 'Japon']>;
+    origin: Attribute.Enumeration<['anime', 'casual', 'urbana']>;
     size: Attribute.Enumeration<['S', 'M', 'L', 'XL']>;
     isFeatured: Attribute.Boolean;
     category: Attribute.Relation<

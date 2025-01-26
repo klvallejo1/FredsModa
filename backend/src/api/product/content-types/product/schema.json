@@ -43,10 +43,9 @@
     "origin": {
       "type": "enumeration",
       "enum": [
-        "USA",
-        "Ecuador",
-        "Internacional",
-        "Japon"
+        "anime",
+        "casual",
+        "urbana"
       ]
     },
     "size": {
