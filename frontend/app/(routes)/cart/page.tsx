@@ -14,7 +14,6 @@ export default function Page() {
 
   const buy = async () => {
     try {
-      removeAll();
       router.push("/success");
     } catch (error) {
       console.error("Error");
