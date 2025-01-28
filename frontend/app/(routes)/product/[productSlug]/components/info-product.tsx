@@ -33,7 +33,7 @@ const InfoProduct = (props : InfoProductProps) => {
             <p className="my-4 text-2xl">{formatPrice(product.attributes.price)}</p>
 
             <div className="flex items-center gap-5">
-                <Button className="w-full" onClick={() => addItem(product)}>Comprar</Button>
+                <Button className="w-full" onClick={() => addItem(product)}>Agregar al carrito</Button>
             </div>
         </div>
      );
