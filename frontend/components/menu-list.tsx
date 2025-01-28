@@ -15,7 +15,6 @@ import {
 } from "@/components/ui/navigation-menu"
 
 
-
 const MenuList = () => {
   return (
     <NavigationMenu>
@@ -64,10 +63,23 @@ const MenuList = () => {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>Redes Sociales</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[400px] gap-3 p-4">
+              <ListItem href="https://www.facebook.com/profile.php?id=100076470093353" title="Facebook🛜">
+                Síguenos en Facebook para más actualizaciones y ofertas.
+              </ListItem>
+              <ListItem href="https://www.instagram.com/freds_moda.ec/?hl=es-la" title="Instagram🎞️">
+                Síguenos en Instagram para ver nuestras últimas colecciones.
+              </ListItem>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-  )
-}
+  );
+};
 
 export default MenuList
 
