@@ -40,13 +40,10 @@ const MenuList = () => {
                 </NavigationMenuLink>
               </li>
               <ListItem href="/shop" title="Tienda">
-                Accede a toda tu información, pedidos y más.
+                Compra en línea y te lo hacemos llegar a la puerta de tu casa 🤗 
               </ListItem>
-              <ListItem href="/offers" title="Ofertas">
-                Ofertas y promociones exclusivas.
-              </ListItem>
-              <ListItem href="/" title="Accesorios">
-                Styles for headings, paragraphs, lists...etc
+              <ListItem href="/shop" title="Ubicación">
+                Ubicados en el sector de Quitumbe Plataforma Gubernamental Sur 🛍️
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -67,13 +64,6 @@ const MenuList = () => {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/accesorios" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Accesorios
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   )
@@ -81,42 +71,29 @@ const MenuList = () => {
 
 export default MenuList
 
-//Cambiar aquí
 const components: { title: string; href: string; description: string }[] = [
     {
-      title: "Camisetas",
+      title: "Camisetas👕",
       href: "/docs/primitives/alert-dialog",
       description:
-        "Camisetas que se adaptan a tu estilo y personalidad.",
+        "Camisetas que se adaptan a tu estilo y personalidad. Oversize, básicas, slim fit.",
     },
     {
-      title: "Gorras",
+      title: "Gorras🧢",
       href: "/docs/primitives/hover-card",
       description:
-        "Gorras de moda para cualquier ocasión.",
+        "Gorras de moda para cualquier ocasión. Básicas, con estampados, de marca.",
     },
     {
-      title: "Jeans",
+      title: "Jeans👖",
       href: "/docs/primitives/progress",
       description:
-        "Pantalones jeans de la mas alta calidad.",
+        "Pantalones jeans de la mas alta calidad. Slim fit, skinny, bootcut.",
     },
     {
-      title: "Accesorios",
+      title: "Accesorios💍",
       href: "/docs/primitives/scroll-area",
-      description: "Accesorios para complementar tu outfit. Revisalos!",
-    },
-    {
-      title: "Tabs",
-      href: "/docs/primitives/tabs",
-      description:
-        "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-    },
-    {
-      title: "Tooltip",
-      href: "/docs/primitives/tooltip",
-      description:
-        "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      description: "Accesorios para complementar tu outfit. Revisalos! Anillos, collares, pulseras.",
     },
   ]
 

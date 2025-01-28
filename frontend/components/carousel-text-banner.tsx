@@ -7,27 +7,21 @@ import Autoplay from "embla-carousel-autoplay";
 export const dataCarouselTop = [
   {
     id: 1,
-    title: "Envio rapido",
-    description: "Servientrega",
-    link: "#!",
+    title: "Envío rápido 🛻",
+    description: "Enviamos con Servientrega a nivel nacional",
+    link: "/",
   },
   {
     id: 2,
-    title: "Envio rapido 2",
-    description: "Servientrega",
-    link: "#!",
+    title: "Variedad en artículos🧣",
+    description: "Revisa nuestro catálogo de productos y selecciona tus favoritos!",
+    link: "/!",
   },
   {
     id: 3,
-    title: "Envio rapido 3",
-    description: "Servientrega",
-    link: "#!",
-  },
-  {
-    id: 4,
-    title: "Envio rapido 4",
-    description: "Servientrega",
-    link: "#!",
+    title: "Pago Seguro 💳",
+    description: "Paga con tu método de pago favorito!",
+    link: "/",
   },
 ];
 

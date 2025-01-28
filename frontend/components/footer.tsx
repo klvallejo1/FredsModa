@@ -4,22 +4,7 @@ import { Separator } from "./ui/separator";
 const dataFooter = [
     {
         id:1,
-        name: "Sobre Nosotros",
-        link: "#"
-    },
-    {
-        id:2,
-        name: "Productos",
-        link: "#"
-    },
-    {
-        id:3,
-        name: "Mi cuenta",
-        link: "#"
-    },
-    {
-        id:4,
-        name: "Politicas",
+        name: "Av.Llira Ñan S35 y Pachamama. Sector Quitumbe. Plataforma Gubernamental Sur",
         link: "#"
     },
 ]
@@ -31,9 +16,9 @@ const Footer = () => {
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <p>
                         <span className="font-bold">
-                            Fred's Moda
+                            Fred's Moda 
                         </span>
-                            Variedad en artículos de vestir
+                            -Variedad en artículos de vestir
                     </p>
 
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
